@@ -1,0 +1,16 @@
+[{
+    "idade": 3,
+    "nome": "Bob",
+    "cores": ["preto", "branco"],
+    "vacinas": [
+       {
+          "nome": "Vacina contra a raiva",
+          "data": "2022-05-15"
+       },
+       {
+          "nome": "Vacina V8",
+          "data": "2021-10-02"
+       }
+    ],
+    "mais_informacoes": "Bob é um cachorro grande"
+ }]

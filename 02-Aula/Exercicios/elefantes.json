@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Deobaldo",
+        "cor": ["cinza", "branco"],
+        "som": "VIIIIIIII",
+        "especie": "Asiático"
+    },
+    {
+        "nome": "Dumbo",
+        "cor": ["branco", "rosa"],
+        "som": "VUUUMMMMMM",
+        "especie": "Africano"
+    }
+]
