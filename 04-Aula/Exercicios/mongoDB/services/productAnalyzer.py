@@ -22,8 +22,8 @@ class productAnalyzer():
         '''
         results = self.db.collection.aggregate([
             {"$unwind": "$produtos"},
-            {"$group": {"_id":"$produtos.nome", "quantidade":{"$sum":"$produtos.quantidade"}}},
-            {"$sort":{"quantidade":1}},
+            {"$group": {"_id":"$produtos.nome", "quantity":{"$sum":"$produtos.quantidade"}}},
+            {"$sort":{"quantity":1}},
             {"$limit":1}
         ])
         return results.next()['_id']
@@ -34,16 +34,16 @@ class productAnalyzer():
         '''
         results = self.db.collection.aggregate([
             {"$unwind": "$produtos"},
-            {"$project": {"_id": 1, "gasto": {"$sum": {"$multiply": ["$produtos.quantidade", "$produtos.preco"]}}}},
-            {"$group": {"_id": "$_id", "menorGasto":{"$sum":"$gasto"}}},
-            {"$sort":{"menorGasto":1}},
+            {"$project": {"_id": 1, "expense": {"$sum": {"$multiply": ["$produtos.quantidade", "$produtos.preco"]}}}},
+            {"$group": {"_id": "$_id", "leastExpense":{"$sum":"$expense"}}},
+            {"$sort":{"leastExpense":1}},
             {"$limit":1}
         ])
         id = results.next()["_id"]
         results = self.db.collection.aggregate([
             {"$unwind": "$produtos"},
             {"$match": {"_id": id}},
-            {"$group":{"_id":"$cliente_id", "gasto":{"$sum": {"$multiply": ["$produtos.quantidade", "$produtos.preco"]}}}}
+            {"$group":{"_id":"$cliente_id", "expense":{"$sum": {"$multiply": ["$produtos.quantidade", "$produtos.preco"]}}}}
         ])
         return results.next()["_id"]
     
@@ -53,8 +53,8 @@ class productAnalyzer():
         '''
         results = self.db.collection.aggregate([
             {"$unwind": "$produtos"},
-            {"$group": {"_id":"$produtos.nome", "quantidade":{"$sum":"$produtos.quantidade"}}},
-            {"$match": {"quantidade":{"$gt":2}}},
+            {"$group": {"_id":"$produtos.nome", "quantity":{"$sum":"$produtos.quantidade"}}},
+            {"$match": {"quantity":{"$gt":2}}},
             {"$project":{"_id": 1}}
         ])
 
