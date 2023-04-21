@@ -1,0 +1,18 @@
+{
+    "_id": "3x3x3x",
+    "nome": "Leão",
+    "especie": "Mamifero",
+    "idade": 10,
+    "habitats":[
+        {
+            "_id": "teste",
+            "nome": "teste",
+            "tipoAmbiente": "teste",
+            "cuidador":{
+                "_id": "20",
+                "nome": "Zé",
+                "documento": "1s13g12h"
+            }
+        }
+    ]
+}
