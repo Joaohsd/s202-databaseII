@@ -1,0 +1,14 @@
+{
+    "nome": "Zé Bagre",
+    "idade": 21,
+    "profissão": "Jogador de Futebol",
+    "parentescos":{
+        "primos":[
+            "Joao", "Paulo", "Abreu"
+        ],
+        "conjuge":"Maria",
+        "netos":[
+            "Luiz", "Michel"
+        ]
+    }
+}

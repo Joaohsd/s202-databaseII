@@ -1,0 +1,20 @@
+[
+    {
+        "nomeSensor": "Temperatura da Sala",
+        "valorSensor": 0,
+        "unidadeMedida": "°C",
+        "sensorAlarmado": false
+    },
+    {
+        "nomeSensor": "Temperatura da Cozinha",
+        "valorSensor": 0,
+        "unidadeMedida": "°C",
+        "sensorAlarmado": false
+    },
+    {
+        "nomeSensor": "Temperatura do Quarto",
+        "valorSensor": 0,
+        "unidadeMedida": "°C",
+        "sensorAlarmado": false
+    }
+]
